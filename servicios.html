@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" translate="no" class="notranslate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/servicios.css" />
+
+    <title>Servicios</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="/images/Recurso3.png" alt="" /></a>
+            <ul id="links">
+              <li class="linkBtn"><a class="link" href="index.html">HOME</a></li>
+              <li class="linkBtn"><a class="link" href="somosMapa.html">SOMOS MAPA</a></li>
+              <li class="linkBtn"><a class="link" href="servicios.html">SERVICIOS</a></a></li>
+              <li class="linkBtn"><a class="link" href="index.html#ustedes" >CLIENTES</a></li>
+              <li class="linkBtn"><a class="link" href="contacto.html">CONTACTO</a></li>
+              <li class="linkBtn"><a class="link" href="blog.html"> BLOG</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+    </div>
+    <div id="mapa">
+        <h1 class="lineUp" id="mapaTitle">mapa</h1>
+    </div>
+    <div id="servicios">
+        <h1 id="serviciosTitle">SERVICIOS</h1>
+        <div id="grid">
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso259.png" alt="">
+                <img id="gridImage" src="/images/Recurso235.png" alt="">
+                <h1 class="animateMe" id="gridText">AUDITORIA 360º</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso258.png" alt="">
+                <img id="gridImage2" src="/images/Recurso230.png" alt="">
+                <h1 class="animateMe" id="gridText1">DONDE ESTAS PARADO CON TUS REDES</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso259.png" alt="">
+                <img id="gridImage" src="/images/Recurso232.png" alt="">
+                <h1 class="animateMe" id="gridText">QUE MESAJE ESTAS DANDO</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso258.png" alt="">
+                <img id="gridImage3" src="/images/Recurso249.png" alt="">
+                <h1 class="animateMe" id="gridText2">CONOCE A TU PUBLICO Y LO QUE SE DICE DE TU MARCA</h1>
+            </div>
+            <div class="gridItem">
+                <img id="mapaImage" src="/images/LogoMaPa.jpg" alt="">
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso258.png" alt="">
+                <img  id="gridImage3" src="/images/Recurso228.png" alt="">
+                <h1 class="animateMe" id="gridText1">TU MARCA COMO REFLEJO DEL NEGOCIO</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso259.png" alt="">
+                <img id="gridImage" src="/images/Recurso231.png" alt="">
+                <h1 class="animateMe" id="gridText3">TODOS TENEMOS CULTURA</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso258.png" alt="">
+                <img id="gridImage" src="/images/Recurso229.png" alt="">
+                <h1 class="animateMe" id="gridText1">HAY EQUIPO</h1>
+            </div>
+            <div class="gridItem">
+                <img class="image" src="/images/Recurso259.png" alt="">
+                <img id="gridImage" src="/images/Recurso227.png" alt="">
+                <h1 class="animateMe" id="gridText3">IDENTIFICA TUS FORTALEZAS Y LAS DE TU PUBLICO</h1>
+            </div>
+        </div>  
+        <div id="empezar">
+            <div id="empezarContent">
+              <h1 id="empezarTitle" class="animateMe">NO SABÉS POR DÓNDE EMPEZAR?</h1>
+              <h1 id="empezarTitle1" class="animateMe">Somos <span id="empezarTitle2">MAPA!</span> </h1>
+              <p id="empezarText" class="animateMe">Recibí una ASESORÍA GRATUITA y Conocenos!</p>
+              <h2 id="empezarPrompt"><a class="contactFormBtn" href="contacto.html"> ¡Reservá tu lugar!</a></h2>
+            </div>
+        </div>
+        <div id="contactanos">
+            <h1 id="contactanosTitle" class="animateMe">CONTACTANOS DESDE DONDE ESTES</h1>
+            <img id="contactanosImg" class="animateMe" src="/images/Recurso242.png" alt="">
+            <div id="contactanosContainer">
+                <div id="footerLinks">
+                    <div class="footerLink">
+                      <img class="footerImg"  src="/images/Recurso238.png" alt="" />
+                      <p class="footerText animateMe">mapa.consultora</p>
+                    </div>
+                    <div class="footerLink">
+                      <img class="footerImg" src="/images/Recurso237.png" alt="" />
+                      <p class="footerText animateMe">info@mapacomunicacion.com</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+<script>
+    (function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navmenu = document.querySelector('#links');
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle('active');
+        navmenu.classList.toggle('active');
+      })
+
+      const reveals = document.querySelectorAll(".animateMe");
+      reveals.forEach(elem => {
+        elem.style.visibility = "hidden";
+        elem.style.transform = "translateY(80%)"
+      })
+
+      function reveal() {
+        reveals.forEach(elem => {
+        elem.style.visibility = "visible";
+        elem.style.transform = "translateY(0%)"
+      })
+      for (var i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 10;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("lineUp");
+        }
+        else{
+          reveals[i].classList.remove("lineUp");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("orientationchange", reveal)
+    window.addEventListener("resize", reveal)
+    reveal()
+    })();
+  </script>
+</html>

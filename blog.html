@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" translate="no" class="notranslate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/blog.css" />
+
+    <title>Blog</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+        <a href="index.html"><img id="logo" src="/images/Recurso3.png" alt="" /></a>
+        <ul id="links">
+          <li class="linkBtn"><a class="link" href="index.html">HOME</a></li>
+          <li class="linkBtn"><a class="link" href="somosMapa.html">SOMOS MAPA</a></li>
+          <li class="linkBtn"><a class="link" href="servicios.html">SERVICIOS</a></a></li>
+          <li class="linkBtn"><a class="link" href="index.html#ustedes" >CLIENTES</a></li>
+          <li class="linkBtn"><a class="link" href="contacto.html">CONTACTO</a></li>
+          <li class="linkBtn"><a class="link" href="blog.html"> BLOG</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+      </div>
+
+      <div id="underConstruction">
+        <h1>Bajo construcción</h1>
+        <img id="logo" src="/images/Recurso3.png" alt="">
+      </div>
+
+      <script>
+        (function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navmenu = document.querySelector('#links');
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle('active');
+        navmenu.classList.toggle('active');
+      })
+})();
+      </script>
+</body>
+</html>

@@ -1,0 +1,1328 @@
+body {
+  margin: 0;
+}
+
+#container {
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.66;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('/fonts/LeagueSpartan-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Raleway-Black';
+  src: url('/fonts/Raleway-Black.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('/fonts/Raleway-Regular.ttf');
+}
+
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 80px 180px 0 180px;
+}
+
+#logo {
+  margin: 30px;
+  width: 500px;
+}
+
+#links {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: #573487;
+  text-align: center;
+  
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #e55d54;
+}
+
+.linkBtn {
+  display: flex;
+  padding: 15px;
+  font-size: 20px;
+}
+
+#confianza {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+
+#confianzaTitle {
+  font-size: 40px;
+  color: #e55d54;
+  font-family: 'LeagueSpartan';
+}
+
+#confianzaText {
+  align-self: center;
+  font-size: 30px;
+  width: 500px;
+  color: #573487;
+  font-family: 'Raleway-Regular';
+}
+#confianzaText1 {
+  align-self: center;
+  font-size: 30px;
+  width: 700px;
+  color: #573487;
+  font-weight: 800;
+  font-family: 'Raleway-Regular';
+}
+#confianzaImgContainer {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0 0 0;
+}
+
+#confianzaImg {
+  height: 600px;
+  width: 500px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-content: left;
+  text-align: left;
+}
+.arrowImgs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -50px;
+}
+.arrowImg {
+  height: 30px;
+  width: 60px;
+}
+
+.contentImages {
+  position: relative;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin: 50px 0 0 0;
+}
+
+.textContentTitle {
+  color: #573487;
+  font-weight: 900;
+  font-family: 'Raleway-Regular';
+  margin: 10px 0 0 0;
+}
+
+.textContentTitle1 {
+  color: #e55d54;
+  font-weight: 900;
+  font-family: 'Raleway-Regular';
+  margin: 10px 0 0 0;
+}
+
+.textContentBody {
+  font-size: 20px;
+  margin: 5px 0 0 0;
+  font-family: 'Raleway-Regular';
+}
+
+.textContentSubtitle {
+  color: #e55d54;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0 0 0;
+  width: 300px;
+  font-family: 'Raleway-Regular';
+}
+
+.textContentSubtitle1 {
+  color: #573487;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 20px 0 0 0;
+  width: 300px;
+  font-family: 'Raleway-Regular';
+}
+
+.textContentBody1 {
+  width: 530px;
+  font-size: 22px;
+  font-family: 'Raleway-Regular';
+}
+
+.iconImgs {
+  margin: 0px 0px 50px 0px;
+}
+
+#homeFooter {
+  display: flex;
+  height: 80px;
+  background-color: #573487;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+#footerContent {
+  color: #fff;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}
+
+#footerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+
+.footerLink {
+  display: flex;
+}
+
+.footerImg {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px 0 0;
+}
+
+.footerText {
+  margin: 1px 20px 0px 0px;
+  font-size: 20px;
+}
+
+/* MAX-WIDTH -- 300 */
+
+@media screen and (min-width: 0px) and (max-width: 300px) {
+  #container {
+    width: 100%;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  #logo {
+    width: 180px;
+    margin: 20px 0 0 10px;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #links {
+    position: absolute;
+    top: -100%;
+    left: -30px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkBtn {
+    margin: 5px auto;
+  }
+
+  #links.active {
+    text-align: center;
+    top: 80px;
+    left: -35px;
+    color: black;
+  }
+  .link {
+    color: black;
+  }
+
+  #confianza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 10px 0 0 0;
+  }
+  
+  #confianzaTitle {
+    font-size: 35px;
+    color: #e55d54;
+  }
+  
+  #confianzaText {
+    align-self: center;
+    font-size: 20px;
+    width: 300px;
+    color: #573487;
+  }
+  #confianzaText1 {
+    align-self: center;
+    font-size: 20px;
+    width: 260px;
+    color: #573487;
+    font-weight: 800;
+  }
+  #confianzaImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  
+  #confianzaImg {
+    margin: 0 auto;
+    height: 300px;
+    width: 250px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: left;
+    text-align: left;
+  }
+  .arrowImgs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    bottom: -50px;
+    
+  }
+  .arrowImg {
+    height: 30px;
+    width: 60px;
+  }
+  
+  .contentImages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: 10px 0 0 0;
+  }
+  
+  .textContentTitle {
+    color: #573487;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentTitle1 {
+    color: #e55d54;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  .textContentBody {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle {
+    color: #e55d54;
+    font-size: 20px;
+    font-weight: 800;
+    width: 240px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle1 {
+    color: #573487;
+    font-size: 20px;
+    font-weight: 800;
+    width: 240px;
+    text-align: center;
+  }
+  
+  .textContentBody1 {
+    width: 250px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .iconImgs {
+    margin: 10px auto;
+  }
+  
+  #homeFooter {
+    height: 200px;
+  }
+
+  #footerContent {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #footerLinks {
+    flex-direction: column;
+  }
+
+  .footerLink {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .footerImg {
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+  }
+
+  .footerText {
+    margin: 1px 0 0 0;
+    font-size: 20px;
+  }
+}
+
+/* MAX-WIDTH -- 500 */
+
+@media screen and (min-width: 301px) and (max-width: 500px) {
+  #container {
+    width: 100%;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #logo {
+    width: 180px;
+    margin: 20px 15px;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #links {
+    position: absolute;
+    top: -100%;
+    left: -30px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkBtn {
+    margin: 5px 0 0 0;
+  }
+
+  #links.active {
+    text-align: center;
+    top: 80px;
+    left: -35px;
+    color: black;
+  }
+  .link {
+    color: black;
+  }
+  #confianza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #confianzaTitle {
+    font-size: 35px;
+    color: #e55d54;
+  }
+  
+  #confianzaText {
+    align-self: center;
+    font-size: 20px;
+    width: 300px;
+    color: #573487;
+  }
+  #confianzaText1 {
+    align-self: center;
+    font-size: 20px;
+    width: 260px;
+    color: #573487;
+    font-weight: 800;
+  }
+  #confianzaImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  
+  #confianzaImg {
+    margin: 0 auto;
+    height: 300px;
+    width: 250px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: left;
+    text-align: left;
+  }
+  .arrowImgs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    bottom: -50px;
+    
+  }
+  .arrowImg {
+    height: 30px;
+    width: 60px;
+  }
+  
+  .contentImages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: 10px 0 0 0;
+  }
+  
+  .textContentTitle {
+    color: #573487;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentTitle1 {
+    color: #e55d54;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  .textContentBody {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle {
+    color: #e55d54;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle1 {
+    color: #573487;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentBody1 {
+    width: 250px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .iconImgs {
+    margin: 10px auto;
+  }
+  
+  #homeFooter {
+    height: 150px;
+  }
+
+  #footerContent {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #footerLinks {
+    flex-direction: column;
+  }
+
+  .footerLink {
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .footerImg {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .footerText {
+    margin: 1px 0 0 0;
+    font-size: 20px;
+  }
+}
+
+/* MAX-WIDTH -- 500 */
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  #container {
+    width: 100%;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  #logo {
+    width: 250px;
+    margin-top: 50px;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #links {
+    position: absolute;
+    top: -100%;
+    left: -30px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkBtn {
+    margin: 16px 0;
+  }
+
+  #links.active {
+    text-align: center;
+    top: 90px;
+    left: -35px;
+    color: black;
+  }
+  .link {
+    color: black;
+  }
+
+  #confianza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #confianzaTitle {
+    font-size: 35px;
+    color: #e55d54;
+  }
+  
+  #confianzaText {
+    align-self: center;
+    font-size: 20px;
+    width: 300px;
+    color: #573487;
+  }
+  #confianzaText1 {
+    align-self: center;
+    font-size: 20px;
+    width: 260px;
+    color: #573487;
+    font-weight: 800;
+  }
+  #confianzaImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  
+  #confianzaImg {
+    margin: 0 auto;
+    height: 300px;
+    width: 250px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: left;
+    text-align: left;
+  }
+  .arrowImgs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    bottom: -50px;
+    
+  }
+  .arrowImg {
+    height: 30px;
+    width: 60px;
+  }
+  
+  .contentImages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: 10px 0 0 0;
+  }
+  
+  .textContentTitle {
+    color: #573487;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentTitle1 {
+    color: #e55d54;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  .textContentBody {
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle {
+    color: #e55d54;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle1 {
+    color: #573487;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentBody1 {
+    width: 250px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .iconImgs {
+    margin: 10px auto;
+  }
+  
+  #homeFooter {
+    height: 150px;
+  }
+
+  #footerContent {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #footerLinks {
+    flex-direction: column;
+  }
+
+  .footerLink {
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .footerImg {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .footerText {
+    margin: 1px 0 0 0;
+    font-size: 20px;
+  }
+}
+
+/* MAX-WIDTH -- 1000 */
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  #container {
+    width: 100%;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  #logo {
+    margin: 20px 0 0 20px;
+    max-width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #links {
+    position: absolute;
+    top: -100%;
+    left: -30px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkBtn {
+    margin: 16px 0;
+  }
+
+  #links.active {
+    text-align: center;
+    top: 120px;
+    left: -35px;
+    color: black;
+  }
+  .link {
+    color: black;
+  }
+
+  #confianza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #confianzaTitle {
+    font-size: 35px;
+    color: #e55d54;
+  }
+  
+  #confianzaText {
+    align-self: center;
+    font-size: 30px;
+    width: 500px;
+    color: #573487;
+  }
+  #confianzaText1 {
+    align-self: center;
+    font-size: 30px;
+    width: 450px;
+    color: #573487;
+    font-weight: 800;
+  }
+  #confianzaImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  
+  #confianzaImg {
+    margin: 0 auto;
+    height: 600px;
+    width: 500px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: left;
+    text-align: left;
+  }
+  .arrowImgs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    bottom: -50px;
+    
+  }
+  .arrowImg {
+    height: 30px;
+    width: 60px;
+  }
+  
+  .contentImages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  
+  .textContentTitle {
+    color: #573487;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentTitle1 {
+    color: #e55d54;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  .textContentBody {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentSubtitle {
+    color: #e55d54;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle1 {
+    color: #573487;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentBody1 {
+    width: 550px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .iconImgs {
+    margin: 10px auto;
+  }
+  
+  #homeFooter {
+    height: 150px;
+  }
+
+  #footerContent {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #footerLinks {
+    flex-direction: row;
+  }
+
+  .footerLink {
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+  }
+
+  .footerImg {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .footerText {
+    margin: 1px 10px 0 0;
+    font-size: 20px;
+  }
+}
+
+/* MAX-WIDTH -- 1500 */
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  #container {
+    width: 100%;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  #logo {
+    margin: 20px 0 0 20px;
+    max-width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #links {
+    position: absolute;
+    top: -100%;
+    left: -30px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.8s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .linkBtn {
+    margin: 16px 0;
+  }
+
+  #links.active {
+    text-align: center;
+    top: 110px;
+    left: -35px;
+    color: black;
+  }
+  .link {
+    color: black;
+  }
+
+  #confianza {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #confianzaTitle {
+    font-size: 35px;
+    color: #e55d54;
+  }
+  
+  #confianzaText {
+    align-self: center;
+    font-size: 30px;
+    width: 500px;
+    color: #573487;
+  }
+  #confianzaText1 {
+    align-self: center;
+    font-size: 30px;
+    width: 450px;
+    color: #573487;
+    font-weight: 800;
+  }
+  #confianzaImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
+  
+  #confianzaImg {
+    margin: 0 auto;
+    height: 600px;
+    width: 500px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-content: left;
+    text-align: left;
+  }
+  .arrowImgs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: static;
+    bottom: -50px;
+    
+  }
+  .arrowImg {
+    height: 30px;
+    width: 60px;
+  }
+  
+  .contentImages {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 0 0 0;
+  }
+  
+  .textContentTitle {
+    color: #573487;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentTitle1 {
+    color: #e55d54;
+    font-weight: 900;
+    font-family: 'Raleway-Black';
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+  
+  .textContentBody {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .textContentSubtitle {
+    color: #e55d54;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentSubtitle1 {
+    color: #573487;
+    font-size: 20px;
+    font-weight: 800;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .textContentBody1 {
+    width: 550px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .iconImgs {
+    margin: 10px auto;
+  }
+  
+  #homeFooter {
+    height: 150px;
+  }
+
+  #footerContent {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  #footerLinks {
+    flex-direction: row;
+  }
+
+  .footerLink {
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+  }
+
+  .footerImg {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  .footerText {
+    margin: 1px 10px 0 0;
+    font-size: 20px;
+  }
+}
+
+/* MAX-WIDTH -- 1500 */
+@media screen and (min-width: 1201px) and (max-width: 1700px) {
+  html{
+    zoom: 67%;
+  }
+}

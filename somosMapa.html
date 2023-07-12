@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" translate="no" class="notranslate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/somosMapa.css" />
+
+    <title>Somos Mapa</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="/images/Recurso3.png" alt="" /></a>
+            <ul id="links">
+              <li class="linkBtn"><a class="link" href="index.html">HOME</a></li>
+              <li class="linkBtn"><a class="link" href="somosMapa.html">SOMOS MAPA</a></li>
+              <li class="linkBtn"><a class="link" href="servicios.html">SERVICIOS</a></a></li>
+              <li class="linkBtn"><a class="link" href="index.html#ustedes" >CLIENTES</a></li>
+              <li class="linkBtn"><a class="link" href="contacto.html">CONTACTO</a></li>
+              <li class="linkBtn"><a class="link" href="blog.html"> BLOG</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+    </div>
+
+    <div id="confianza">
+        <h1 class="lineUp" id="confianzaTitle">PASIÓN Y CONFIANZA</h1>
+        <span class="lineUp" id="confianzaText">Nos une la pasión por lo que hacemos: </span> <span class="lineUp" id="confianzaText1">
+            verle el potencial de comunicación a cada proyecto
+            que se cruza en nuestro camino.
+            Somos MAPA!</span>
+            <div id="confianzaImgContainer">
+                <div class="content">
+                    <div class="contentImages">
+                        <img id="confianzaImg" src="/images/woman1.png" alt="">
+                        <div class="arrowImgs">
+                            <img class="arrowImg" src="/images/Recurso261.png" alt="" />
+                            <img class="arrowImg" src="/images/Recurso262.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <h1 class="textContentTitle animateMe">MARIANELA MANGIONE</h1>
+                        <p class="textContentBody animateMe">Mg. en Gestión de la Comunicación</p>
+                        <p class="textContentSubtitle animateMe">La vida es mejor cuando es
+                            compartida, y comunicada</p>
+                        <p class="textContentBody1 animateMe">Soy Maru! Tengo un perfil integral adquirido en el ámbito
+                                de las comunicaciones organizacionales, y dedico gran
+                                parte de mi tiempo a la gestión de procesos de comunicación y arquitectura de contenidos para campañas publicitarias y de marketing digital. Sumo mi pasión por la
+                                fotografía, la escritura y el estar en cada detalle.
+                                Te dejo más info en mis perfiles >> </p>
+                    </div>
+                    <div class="iconImgs">
+                        <img src="/images/Recurso220.png" alt="">
+                        <img src="/images/Recurso222.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="contentImages">
+                        <img id="confianzaImg" src="/images/woman2.png" alt="">
+                        <div class="arrowImgs">
+                            <img class="arrowImg" src="/images/Recurso215.png" alt="" />
+                            <img class="arrowImg" src="/images/Recurso216.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="textContent">
+                        <h1 class="textContentTitle1 animateMe">MA. PAULA BELMONTE</h1>
+                        <p class="textContentBody animateMe">Mg. en Gestión de la Comunicación</p>
+                        <p class="textContentSubtitle1 animateMe">La vida es mejor cuando es
+                            compartida, y comunicada</p>
+                        <p class="textContentBody1 animateMe">Soy Maru! Tengo un perfil integral adquirido en el ámbito de
+                            las comunicaciones organizacionales, y dedico gran parte de
+                            mi tiempo a la gestión de procesos de comunicación y arquitectura de contenidos para campañas publicitarias y de marketing digital. Sumo mi pasión por la fotografía, la escritura y
+                            el estar en cada detalle.
+                            Te dejo más info en mis perfiles >> </p>
+                    </div>
+                    <div class="iconImgs">
+                        <img src="/images/Recurso221.png" alt="">
+                        <img src="/images/Recurso219.png" alt="">
+                    </div>
+                </div>
+            </div>
+      </div>
+      <div id="homeFooter">
+        <div id="footerContent">
+          <div id="footerLinks">
+            <div class="footerLink">
+              <img class="footerImg"  src="/images/Recurso212.png" alt="" />
+              <p class="footerText animateMe">mapa.consultora</p>
+            </div>
+            <div class="footerLink">
+              <img class="footerImg" src="/images/Recurso211.png" alt="" />
+              <p class="footerText animateMe">info@mapacomunicacion.com</p>
+            </div>
+          </div>
+        </div>
+</body>
+<script>
+    (function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navmenu = document.querySelector('#links');
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle('active');
+        navmenu.classList.toggle('active');
+      })
+      const reveals = document.querySelectorAll(".animateMe");
+      reveals.forEach(elem => {
+        elem.style.visibility = "hidden";
+        elem.style.transform = "translateY(80%)"
+      })
+
+      function reveal() {
+        reveals.forEach(elem => {
+        elem.style.visibility = "visible";
+        elem.style.transform = "translateY(0%)"
+      })
+      for (var i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 10;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("lineUp");
+        }
+        else{
+          reveals[i].classList.remove("lineUp");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("orientationchange", reveal)
+    window.addEventListener("resize", reveal)
+    reveal()
+    })();
+  </script>
+</html>

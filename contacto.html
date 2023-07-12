@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" translate="no" class="notranslate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheets/contactos.css" />
+
+    <title>Contacto</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <a href="index.html"><img id="logo" src="/images/Recurso3.png" alt="" /></a>
+            <ul id="links">
+              <li class="linkBtn"><a class="link" href="index.html">HOME</a></li>
+              <li class="linkBtn"><a class="link" href="somosMapa.html">SOMOS MAPA</a></li>
+              <li class="linkBtn"><a class="link" href="servicios.html">SERVICIOS</a></a></li>
+              <li class="linkBtn"><a class="link" href="index.html#ustedes" >CLIENTES</a></li>
+              <li class="linkBtn"><a class="link" href="contacto.html">CONTACTO</a></li>
+              <li class="linkBtn"><a class="link" href="blog.html"> BLOG</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </nav>
+    </div>
+    <div id="contactContent">
+        <div id="textContent">
+            <h1 class="lineUp"  id="contactTitle">
+                DE ARGENTINA AL <span id="contactTitle1">MUNDO</span> 
+            </h1>
+            <p class="lineUp" id="contactBody">MAPA nació en el 2021 siendo virtual, y en tiempos de pos pandemia gracias al universo 
+                podemos afirmar que nuestros servicios no tienen límites geográficos. La libertad de la 
+                modalidad digital nos permite llegar al lugar del mundo donde te encuentres 
+                estableciendo conversaciones tan cercanas como si estuviéramos en tu oficina.</p>
+            <p class="lineUp" id="contactBody1">De todos modos… <span id="contactBody2"> Bienvenido el encuentro presencial si estamos cerca.</span></p>
+        </div>
+        
+        <form id="contactForm">
+            <img id="formImage" src="/images/Recurso276.png" alt="">
+            <h1 class="lineUp" id="contactFormTitle">Contactanos</h1>
+            <div id="formInputs">
+                <input id="contactFormNameInput" type="text" name="name" placeholder="NOMBRE">
+                    <input id="contactFormSubjectInput" name="subject" type="text" placeholder="ASUNTO">
+                <textarea name="message" id="contactFormMessage" type="text" placeholder="MENSAJE"></textarea>
+                <button id="contactFormSendBtn" type="submit">ENVIAR</button>
+            </div>
+        </form>
+    </div>
+    <div id="homeFooter">
+        <div id="footerContent">
+          <div id="footerLinks">
+            <div class="footerLink">
+              <img class="footerImg"  src="/images/Recurso220.png" alt="" />
+              <p class="footerText animateMe">mapa.consultora</p>
+            </div>
+            <div class="footerLink">
+              <img class="footerImg" src="/images/Recurso222.png" alt="" />
+              <p  class="footerText animateMe">info@mapacomunicacion.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+    (function() {
+
+        const hamburger = document.querySelector('.hamburger');
+      const navmenu = document.querySelector('#links');
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle('active');
+        navmenu.classList.toggle('active');
+      })
+
+     const submitEmail = (e) => {
+         e.preventDefault()
+         e.stopPropagation()
+         const subject = document.getElementById("contactFormSubjectInput").value
+         const body = document.getElementById("contactFormMessage").value
+         const name = document.getElementById("contactFormNameInput").value
+         const completeBody = `Dear MAPA %0D%0A ${body} %0D%0A From ${name}.`
+         window.open(`mailto:markpwmason@outlook.com?subject=${subject}&body=${completeBody}`, '_blank')
+     }
+     document.getElementById("contactForm").addEventListener("submit", submitEmail)
+
+
+     const reveals = document.querySelectorAll(".animateMe");
+     reveals.forEach(elem => {
+        elem.style.visibility = "hidden";
+        elem.style.transform = "translateY(80%)"
+      })
+
+      function reveal() {
+        reveals.forEach(elem => {
+        elem.style.visibility = "visible";
+        elem.style.transform = "translateY(0%)"
+      })
+      for (var i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 10;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("lineUp");
+        }
+        else{
+          reveals[i].classList.remove("lineUp");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("orientationchange", reveal)
+    window.addEventListener("resize", reveal)
+    reveal()
+     })();
+ </script>
+</html>
